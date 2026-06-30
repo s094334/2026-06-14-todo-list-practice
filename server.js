@@ -1,22 +1,8 @@
 const http = require('http');
 const { v4: uuidv4 } = require("uuid");
-const errorHandle = require("./errorHandle")
+const sendResponse = require("./response");
+const errorHandle = require("./errorHandle");
 const todos = [];
-
-const headers = {
-    'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET, POST, DELETE, PATCH, OPTIONS',
-    'Content-Type': 'application/json'
-};
-
-const sendResponse = (response, status, data) => {
-    response.writeHead(status, headers);
-    if (data !== undefined) {
-        response.write(JSON.stringify(data));
-    };
-    response.end();
-}
 
 const requestListener = (request, response) => {
     let body = '';
