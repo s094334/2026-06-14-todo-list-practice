@@ -2,11 +2,24 @@
   "name": "2026-06-14-todo-list-practice",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/s094334/2026-06-14-todo-list-practice#readme",
+  "bugs": {
+    "url": "https://github.com/s094334/2026-06-14-todo-list-practice/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s094334/2026-06-14-todo-list-practice.git"
+  },
   "license": "ISC",
-  "author": "",
+  "author": "chelsea",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "uuid": "^14.0.0"
   }
 }
